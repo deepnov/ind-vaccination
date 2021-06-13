@@ -1,0 +1,17 @@
+{
+  "name": "slack-push",
+  "version": "0.0.0",
+  "description": "SlackPush",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "scripts": {
+    "test": "node app.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@slack/web-api": "^6.2.4",
+    "puppeteer": "^2.0.0"
+  }
+}
