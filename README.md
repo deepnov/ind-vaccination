@@ -1,2 +1,2 @@
 # ind-vaccination
-Script to alert covid-9 vaccine dose availability for a location in India via slack
+Script to alert covid-19 vaccine dose availability for a location in India via slack
