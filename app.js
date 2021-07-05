@@ -5,9 +5,10 @@ const location = [{ districtId: 571, name: 'chennai' }, { districtId: 581, name:
 // ID of your Slack channel if you want to send the message to your slack mobile app
 const channelId = "vaccination-chennai";//(NEED CONFIGURATION)
 //search patterns for finding availability from api response
-let regexp = [{ re: /available_capacity\":[0-9]+,\"min_age_limit\":[0-9]+,\"vaccine\":\"COVAXIN/gi, type: 'covaxin',count:0 },
-    { re: /available_capacity\":[0-9]+,\"min_age_limit\":[0-9]+,\"vaccine\":\"COVISHIELD/gi, type: 'covishield', count: 0},
-    { re: /available_capacity\":[0-9]+,\"min_age_limit\":[0-9]+,\"vaccine\":\"SPUTNIK/gi, type: 'sputnik', count: 0}];
+ let regexp = [{ re: /available_capacity\":[0-9]+,\"min_age_limit\":[0-9]+,\"allow_all_age\":[a-z]+,\"vaccine\":\"COVAXIN/gi, type: 'covaxin', count: 0 },
+        { re: /available_capacity\":[0-9]+,\"min_age_limit\":[0-9]+,\"allow_all_age\":[a-z]+,\"vaccine\":\"COVISHIELD/gi, type: 'covishield', count: 0 },
+        { re: /available_capacity\":[0-9]+,\"min_age_limit\":[0-9]+,\"allow_all_age\":[a-z]+,\"vaccine\":\"SPUTNIK/gi, type: 'sputnik', count: 0 }];
+
 
 const currentTrackIndex = 2;//index of vaccine in regexp array for which alert needs to be sent (NEED CONFIGURATION)
 
